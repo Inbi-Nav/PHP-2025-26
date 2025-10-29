@@ -124,6 +124,51 @@ header {
   padding: 5px;
 }
 
+/* LEER MAS  */
+.read-more-input {
+  display: none;
+}
+
+.read-more {
+  display: none;
+}
+
+.read-more-input:checked ~ .text-1 .read-more {
+  display: inline;
+}
+
+.read-more-input:checked ~ .text-2 .read-more {
+  display: inline;
+}
+
+.read-more-input:checked ~ .text-3 .read-more {
+  display: inline;
+}
+
+.read-more-input:checked ~ .text- .read-more {
+  display: inline;
+}
+
+.read-more-label::before {
+  content: "Leer más...";
+  color: #999;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.read-more-input:checked ~ .read-more-label::before {
+  content: "Leer menos...";
+  color: #e15b00;
+}
+
+/* Estilo al pasar el ratón */
+.read-more-label:hover::before {
+  text-decoration: underline;
+}
+
+
+
 /* SIDEBAR  */
 .sidebar {
   background-color: #D8D7D7;
@@ -141,27 +186,12 @@ header {
 }
 
 /* IMAGES */
-.sakura {
-  height: 250px;
-  width: 100%;
-}
-
-.comida {
-  height: 250px;
-  width: 100%;
-}
-
-.fuji {
-  height: 250px;
-  width: 100%;
-}
-.noche {
-  height: 250px;
+.sakura, .comida, .fuji, .noche {
+  height: 260px;
   width: 100%;
 }
 
 /* DATES INSIDE THE IMAGES  */
-
 .date-1{
   position: relative;
   bottom:25px;

@@ -160,6 +160,35 @@ header {
   width: 100%;
 }
 
+/* DATES INSIDE THE IMAGES  */
+
+.date-1{
+  position: relative;
+  bottom:25px;
+  left:5px;
+  color: rgb(236, 217, 8);
+}
+
+.date-2{
+  position: relative;
+  bottom:25px;
+  left:5px;
+  color: rgb(236, 217, 8);
+}
+.date-3{
+  position: relative;
+  bottom:25px;
+  left:5px;
+  color: rgb(236, 217, 8);
+}
+.date-4{
+  position: relative;
+  bottom:25px;
+  left:5px;
+  color: rgb(236, 217, 8);
+}
+
+
 /* FOOTER  */
 footer {
   background-color: #dbd9d9;

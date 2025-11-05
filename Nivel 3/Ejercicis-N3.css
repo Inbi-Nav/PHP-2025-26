@@ -27,11 +27,11 @@
 @keyframes slideInUp {
   0% {
     transform: translateY(50px);
-    opacity: 0;
+    opacity: 0.5;
   }
   100% {
     transform: translateY(0);
-    opacity: 1;
+    opacity: 0.5;
   }
 }
 
@@ -150,7 +150,8 @@ header {
 
 .text h2 {
   display: inline-block;
-  background-color: rgba(216, 215, 215, 0.4);
+  background-color: rgba(216, 215, 215);
+  opacity: 0.5;
   padding: 20px 40px;
   color: #f09e67;
   height: 100px;
@@ -163,6 +164,7 @@ header {
   gap: 20px;
   padding: 20px;
   background-color: white;
+  
 }
 
 .body-main {
@@ -198,8 +200,10 @@ header {
 .text-3, 
 .text-4 {
   column-count: 2;
-  column-gap: 20px;
+  column-gap: 70px;
   line-height: 1.5;
+  margin-top: 15px;
+
 }
 
 .title-1, 
@@ -209,10 +213,20 @@ header {
   background-color: #F08080;
   color: white;
   padding: 8px;
-  margin: 10px 0;
+  margin: 20px 0;
   animation: colorChange 3s ease-in-out infinite;
+  text-shadow:  #ff005e,  #ff005e,  #ff005e,  #ff005e,  #ff005e;
+  animation: glow 1.5s infinite alternate;
 }
 
+@keyframes glow {
+    0% {
+        text-shadow: #ff005e, #ff005e;
+    }
+    100% {
+        text-shadow: 0 0 10px #d0dd49, 0 0 20px #d0dd49, 0 0 40px #00d4ff, 0 0 80px #d0dd49, 0 0 160px #d0dd49;
+    }
+}
 .read-more-input {
   display: none;
 }
@@ -221,10 +235,19 @@ header {
   display: none;
 }
 
-.read-more-input:checked ~ .text-1 .read-more,
-.read-more-input:checked ~ .text-2 .read-more,
-.read-more-input:checked ~ .text-3 .read-more,
-.read-more-input:checked ~ .text-4 .read-more {
+.read-more-input:checked ~ .text-1 .read-more {
+  display: inline;
+}
+
+.read-more-input:checked ~ .text-2 .read-more {
+  display: inline;
+}
+
+.read-more-input:checked ~ .text-3 .read-more {
+  display: inline;
+}
+
+.read-more-input:checked ~ .text- .read-more {
   display: inline;
 }
 
@@ -234,17 +257,11 @@ header {
   cursor: pointer;
   font-size: 14px;
   text-decoration: none;
-  display: inline-block;
-  margin-top: 10px;
 }
 
 .read-more-input:checked ~ .read-more-label::before {
   content: "Leer menos...";
   color: #e15b00;
-}
-
-.read-more-label:hover::before {
-  text-decoration: underline;
 }
 
 .sidebar {
